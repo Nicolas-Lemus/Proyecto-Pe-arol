@@ -1,0 +1,452 @@
+*{
+    margin:0;
+    padding:0 !important;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(209, 185, 46);
+    font-family: initial;
+    background: rgba(7, 7, 7, 0.822)!important;
+    box-sizing: content-box;
+}
+input , textarea{
+    background: rgba(243, 243, 236, 0.979) !important;
+}
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-around;
+    position:fixed;
+    z-index: 1;
+    width:100%;
+    background: rgb(7, 7, 7) !important;
+}
+/*Logos*/
+#logotipo{
+    border-radius: 50%;
+    width:0px;
+    max-width: 100%;
+    animation: girar linear infinite 10s;
+}
+@keyframes girar{
+    from{
+        transform:rotateY(0deg)
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+.emblema img{
+    width:154px;
+    height:34px;
+    padding-top:10px !important;
+}
+/*Menu principal*/
+.nav__principal{
+    background: none!important;
+}
+#navbarNav ul{
+    width:100%;
+    gap:5px;
+}
+#navbarNav ul li{
+    margin: 16px;
+    height: 100%;
+}
+#navbarNav ul li a{
+    font-family: 'Seymour One', sans-serif; 
+    font-size: .8rem;
+    text-align: center;
+    color: rgb(255, 196, 0);
+    text-decoration: none;
+    background-image:linear-gradient(rgb(51, 40, 40) , rgb(238, 255, 7)) !important;
+    background-position: 0% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 0% 1px !important;
+    transition: background-size .6s;
+}
+#navbarNav ul li a:hover, a:focus {
+    background-size: 100% 2px !important;
+}
+#navbarNav ul li a:hover{
+    color:rgb(247, 243, 6);
+    transition:0.6s;
+}
+.active{
+    color:rgb(255, 238, 0) !important;
+    text-decoration:underline !important;
+}
+span img{
+    width:30px;
+}
+/*scroll de imagenes*/
+#scroll{
+    padding-top:50px !important;
+    width:100%;
+    margin:0 !important;
+    overflow: hidden;
+    height: 250px;
+}
+#scroll ul{
+    display:flex;
+    width:420%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+}
+#scroll ul li{
+    list-style: none;
+    width: 100%;
+}
+#scroll img{
+    width: 100%;
+    height:250px;
+    background: rgb(8, 8, 8);
+}
+@keyframes cambio {
+    0% {margin-left: 0; }
+    20%{ margin-left: 0; }
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -110%;}
+
+    50%{margin-left: -210%;}
+    70%{margin-left: -220%;}
+
+    75%{margin-left: -320%;}
+    100%{margin-left: -330%;}
+}
+/*Index*/
+.encabezado{
+    background: rgb(7, 7, 7);
+    margin-bottom:100px;
+}
+.encabezado__articulo{
+    text-align: center;
+    justify-content: center;
+}
+.encabezado__titulo{
+    padding-bottom: 10px;
+    font-size: 1.9rem;
+    color: rgb(231, 199, 18);
+}
+.encabezado__complemento{
+    font-size: .8rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    color: rgb(146, 134, 66);
+    padding-bottom:10px;
+}
+#cards__title{
+    font-size: 1rem;
+    text-decoration: underline;
+    margin:50px;
+}
+.button__arriba{
+    display: inline-block;
+    background: rgb(192, 169, 68) !important;
+    margin:80px 20px;
+}
+.button__arriba a{
+    color: rgb(15, 15, 15);
+    background: rgb(192, 169, 68) !important;
+    font-size: 0.9rem !important;
+    text-decoration: none;
+}
+.card-body{
+    background: none !important;
+}
+.card{
+    background:rgba(71, 68, 55, 0.521) !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: solid 1px;
+    margin:5px !important;
+}
+.card img{
+    width:500px;
+    max-width: 100%;
+    max-height: 350px;
+    height:100%;
+}
+.card h5{
+    color: rgb(235, 180, 31);
+    background:rgba(53, 52, 37, 0.801)!important;
+    font-size: 1.8rem;
+}
+.card p{
+    color: rgb(241, 208, 124);
+    font-size: 1rem;
+    background:none !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card:hover{
+    transition: 1s;
+    cursor: pointer;
+    opacity: 80%;
+}
+.card-group{
+    padding:20px !important;
+}
+.text-muted {
+    color: rgb(197, 191, 140) !important;
+}
+.formulario{
+    max-width: 100%;
+    width: 90%;
+    border: 2px solid;
+    align-content: center;
+    text-align: center;
+    margin:auto;
+    margin-top: 130px;
+    background: none;
+    background: black;
+}
+.formulario h2{
+    justify-content: center;
+    font-size:1.4rem;
+    padding:auto;
+    background: none;
+    margin: 50px;
+}
+.formulario input{
+    background: rgb(247, 245, 245);
+    height:25px;
+    color: black;
+    width: 70%;
+}  
+.formulario__correo ,.formulario__nombre ,.formulario__mensaje{
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: auto;
+}
+.formulario textarea{
+    background: white;
+    color: black;
+    width: 70%;
+}
+#Enviar{
+    color: rgb(253, 251, 251);
+    background: rgb(6, 173, 196) !important;
+    padding:auto;
+    font-size: 1rem;
+    margin:50px;
+    width:90px;
+    height: 30px;
+}
+#Enviar:hover{
+    background:rgb(116, 218, 231) !important;
+    cursor: pointer;
+    color: rgb(255, 254, 254);
+    transition: .7s;
+}
+#footer{
+    width: 100%;
+    text-align: center;
+    background: black;
+}
+#footer h2{
+    font-size: 1rem;
+    margin:40px;
+}
+#footer a{
+    font-size: .8rem;
+    background: none;
+}
+#footer img{
+    width: 30px;
+    margin:10px;
+    background:none;
+}
+#footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+.footer__nav h2{
+    font-size: 1rem;
+    color: rgb(218, 191, 43);
+    background: rgb(12, 12, 12);
+}
+.footer__nav ul li{
+    margin: 1rem;
+}
+.footer__nav ul li a{
+    text-decoration: none;
+    color: rgb(199, 180, 86);
+    font-size: 1.1rem;
+}
+.footer__nav ul li a:hover{
+    color: rgb(235, 203, 23);
+    transition: 0.5s;
+}
+/*Galeria*/
+.title__galeria{
+    background: none;
+}
+.title__galeria h1{
+    font-size: 3rem;
+    background: none;
+    display: flex;
+    justify-content: center;
+    padding-top:270px !important;
+}
+.title__galeria h2{
+    background:rgb(22, 21, 21) !important;
+    font-size: 1.6rem;
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center; 
+}
+.title__galeria p{
+    font-family: monospace;
+    padding: auto;
+    margin: 20px;
+    background:rgb(49, 48, 48) !important;
+    font-size: 1rem;
+    color: rgb(238, 225, 150);
+}
+.galeria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background: none;
+}
+.galeria img{
+    width:500px;
+    margin:10px;
+    max-width: 100%;
+    max-height: 350px;
+}
+.galeria img:hover{
+    box-shadow: 0px 0px 30px;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: 70%;
+}
+iframe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background: none;
+    margin: 50px;
+    height:350px;
+}
+/* Contactanos*/
+.contactanos{
+    background: none;
+    padding-top:470px;
+}
+.contactanos__title{
+    padding-top:320px !important ;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    background: none;
+}
+/*Palmares e Informacion*/
+.centrar{
+    text-align: center;
+    background: none;
+    padding-top: 150px;
+}
+.centar__parr{
+    text-align: center;
+    background: none;
+}
+.centar__parr h1{
+    padding:10px;}
+/*MEDIA QUERIE*/ 
+/*Tamaño 576px*/
+@media screen and (min-width :576px) {
+    .encabezado__titulo{
+        font-size: 5rem;
+    }
+    .title__galeria h1{
+        font-size: 5rem;
+    }
+    .title__galeria h2{
+        font-size: 2.6rem;
+    }
+    .card-group{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+    #scroll{
+        padding-top: 100px !important;
+        height: 350px;
+    }
+    #scroll img{
+        height: 350px;
+    }
+    #logotipo{
+        width: 100px;
+    }
+    .emblema img{
+        padding-top: 30px !important;
+    }
+}
+/*Tamaño 992px*/
+@media screen and (min-width :992px) {
+    #logotipo{
+        width: 200px;
+        height: 150px;
+    }
+    #scroll{
+        padding-top:200px !important;
+        height: 500px;
+    }
+    #scroll img{
+        height: 500px;
+    }
+    .nav__principal ul li ,.formulario label{
+        font-size: 1.8rem;
+    }
+    .encabezado__articulo h2 ,.noticias #cards__title, #formulario__h2{
+        font-size: 3rem;
+    }
+    #footer #footer__h2{
+        font-size: 2.7rem;
+    }
+    #footer a img{
+        width: 60px;
+    }
+    .title__galeria p ,.footer__nav #footer__nav__h2 ,#parr{
+        font-size: 2.2rem;
+    }
+    .card{
+        margin:20px !important;
+        padding:10px !important;
+    }
+    .card p,#footer a{
+        font-size: 1.5rem;
+    }
+    .encabezado__articulo h1 ,.title__galeria h1{
+        font-size: 8rem;
+    }
+    .title__galeria h2 ,.contactanos__title{
+    font-size: 5rem;
+    }
+    .card-group{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+    .formulario{
+        width: 60%;
+    }
+    .formulario input ,.formulario textarea{
+        width: 40%;
+    }
+    .emblema img{
+        padding-top:55px !important;
+        width: 206px;
+        height: 44px;
+    }
+    iframe{
+        height:700px;
+    }
+}
