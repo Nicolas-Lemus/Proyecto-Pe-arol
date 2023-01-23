@@ -21,24 +21,15 @@ header{
     background: rgb(7, 7, 7) !important;
 }
 /*Logos*/
-#logotipo{
-    border-radius: 50%;
-    width:0px;
-    max-width: 100%;
-    animation: girar linear infinite 10s;
-}
-@keyframes girar{
-    from{
-        transform:rotateY(0deg)
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
 .emblema img{
+    display: flex;
+    align-items:left;
     width:154px;
     height:34px;
     padding-top:10px !important;
+}
+#logotipo{
+    width: 0px;
 }
 /*Menu principal*/
 .nav__principal{
@@ -56,7 +47,7 @@ header{
     font-family: 'Seymour One', sans-serif; 
     font-size: .8rem;
     text-align: center;
-    color: rgb(255, 196, 0);
+    color: rgb(239, 239, 177);
     text-decoration: none;
     background-image:linear-gradient(rgb(51, 40, 40) , rgb(238, 255, 7)) !important;
     background-position: 0% 100% !important;
@@ -72,7 +63,7 @@ header{
     transition:0.6s;
 }
 .active{
-    color:rgb(255, 238, 0) !important;
+    color:rgb(247, 243, 6)!important;
     text-decoration:underline !important;
 }
 span img{
@@ -115,6 +106,17 @@ span img{
     100%{margin-left: -330%;}
 }
 /*Index*/
+.button__arriba{
+    display: inline-block;
+    background: rgb(222, 209, 153) !important;
+    margin:80px 20px;
+}
+.button__arriba a{
+    color: rgb(15, 15, 15);
+    background: rgb(230, 214, 145) !important;
+    font-size: 0.9rem !important;
+    text-decoration: none;
+}
 .encabezado{
     background: rgb(7, 7, 7);
     margin-bottom:100px;
@@ -136,21 +138,13 @@ span img{
     color: rgb(146, 134, 66);
     padding-bottom:10px;
 }
-#cards__title{
-    font-size: 1rem;
-    text-decoration: underline;
-    margin:50px;
-}
-.button__arriba{
+.noticias h2{
+    padding:5px !important;
+    border-radius: 5px;
+    color: rgb(255, 238, 0);
     display: inline-block;
-    background: rgb(192, 169, 68) !important;
-    margin:80px 20px;
-}
-.button__arriba a{
-    color: rgb(15, 15, 15);
-    background: rgb(192, 169, 68) !important;
-    font-size: 0.9rem !important;
-    text-decoration: none;
+    background: rgb(122, 118, 118) !important;
+    margin-left: 30px;
 }
 .card-body{
     background: none !important;
@@ -164,9 +158,9 @@ span img{
     margin:5px !important;
 }
 .card img{
-    width:500px;
+    width:350px;
     max-width: 100%;
-    max-height: 350px;
+    max-height: 250px;
     height:100%;
 }
 .card h5{
@@ -272,11 +266,11 @@ span img{
 }
 .footer__nav ul li a{
     text-decoration: none;
-    color: rgb(199, 180, 86);
+    color: rgb(239, 239, 177);
     font-size: 1.1rem;
 }
 .footer__nav ul li a:hover{
-    color: rgb(235, 203, 23);
+    color:rgb(247, 243, 6);
     transition: 0.5s;
 }
 /*Galeria*/
@@ -306,18 +300,16 @@ span img{
     color: rgb(238, 225, 150);
 }
 .galeria{
+    gap: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    max-width: 100%;
     flex-wrap: wrap;
-    background: none;
-}
+    align-items: center;
+    }
 .galeria img{
-    width:500px;
-    margin:10px;
+    margin: 0px auto;
+    width:300px;
     max-width: 100%;
-    max-height: 350px;
+    max-height: 300px;
 }
 .galeria img:hover{
     box-shadow: 0px 0px 30px;
@@ -325,14 +317,19 @@ span img{
     transition: 0.6s;
     opacity: 70%;
 }
+.galeria__videos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 iframe{
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     justify-content: center;
     max-width: 100%;
     flex-wrap: wrap;
     background: none;
-    margin: 50px;
     height:350px;
 }
 /* Contactanos*/
@@ -383,11 +380,36 @@ iframe{
     #scroll img{
         height: 350px;
     }
-    #logotipo{
-        width: 100px;
-    }
     .emblema img{
         padding-top: 30px !important;
+    }
+    #logotipo{
+        border-radius: 50%;
+        width:100px;
+        max-width: 100%;
+        animation: girar linear infinite 10s;
+    }
+    @keyframes girar{
+        from{
+            transform:rotateY(0deg)
+        }
+        to{
+            transform: rotateY(360deg);
+        }
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    .galeria img{
+        width:500px;
+        max-width: 100%;
+        max-height: 350px;
+    }
+    iframe{
+        max-width: 100%;
+        height:450px;
     }
 }
 /*Tamaño 992px*/
@@ -448,5 +470,20 @@ iframe{
     }
     iframe{
         height:700px;
+    }
+    .card img{
+        width:500px;
+        max-width: 100%;
+        max-height: 350px;
+        height:100%;
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    iframe{
+        max-width: 100%;
+        height:600px;
     }
 }
