@@ -1,15 +1,18 @@
+/*variables por defecto de bootstrap editadas*/
+:root{
+    --bs-body-bg:rgb(18, 18, 19);
+    --bs-tertiary-bg-rgb:0;
+    --bs-secondary-color: rgba(191, 195, 187, 0.927);
+}
+/*body*/
 *{
     margin:0;
-    padding:0 !important;
+    padding:0;
     list-style: none;
     text-decoration: none;
-    color: rgb(209, 185, 46);
+    color: rgb(182, 173, 107);
     font-family: initial;
-    background: rgba(7, 7, 7, 0.822)!important;
     box-sizing: content-box;
-}
-input , textarea{
-    background: rgba(243, 243, 236, 0.979) !important;
 }
 /*Header*/
 header{
@@ -18,28 +21,26 @@ header{
     position:fixed;
     z-index: 1;
     width:100%;
-    background: rgb(7, 7, 7) !important;
+    background: rgb(0, 0, 0);
 }
-/*Logos*/
+/*Logos y span*/
 .emblema img{
-    display: flex;
-    align-items:left;
     width:154px;
     height:34px;
-    padding-top:10px !important;
+    padding-top:10px;
 }
 #logotipo{
-    width: 0px;
+    width: 100px;
+    display: none;
 }
 /*Menu principal*/
-.nav__principal{
-    background: none!important;
-}
 #navbarNav ul{
+    background-color: black;
     width:100%;
     gap:5px;
 }
 #navbarNav ul li{
+    background-color: black;
     margin: 16px;
     height: 100%;
 }
@@ -47,41 +48,42 @@ header{
     font-family: 'Seymour One', sans-serif; 
     font-size: .8rem;
     text-align: center;
-    color: rgb(239, 239, 177);
+    color: rgba(162, 162, 142, 0.872);
     text-decoration: none;
-    background-image:linear-gradient(rgb(51, 40, 40) , rgb(238, 255, 7)) !important;
-    background-position: 0% 100% !important;
-    background-repeat: no-repeat !important;
-    background-size: 0% 1px !important;
+    background-image:linear-gradient(rgb(51, 40, 40) , rgb(238, 255, 7));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
     transition: background-size .6s;
 }
 #navbarNav ul li a:hover, a:focus {
-    background-size: 100% 2px !important;
+    background-size: 100% 2px;
 }
 #navbarNav ul li a:hover{
     color:rgb(247, 243, 6);
     transition:0.6s;
 }
-.active{
-    color:rgb(247, 243, 6)!important;
-    text-decoration:underline !important;
+.footer__nav a.active ,#navbarNav ul li a.active{
+    color:rgb(247, 243, 6);
+    text-decoration:underline;
 }
 span img{
     width:30px;
 }
 /*scroll de imagenes*/
 #scroll{
-    padding-top:50px !important;
+    padding-top:50px;
     width:100%;
-    margin:0 !important;
+    margin:0;
     overflow: hidden;
-    height: 250px;
+    height:250px;
 }
 #scroll ul{
     display:flex;
     width:420%;
     animation: cambio 20s infinite;
     animation-direction: alternate;
+    padding-left: 0px;
 }
 #scroll ul li{
     list-style: none;
@@ -90,7 +92,6 @@ span img{
 #scroll img{
     width: 100%;
     height:250px;
-    background: rgb(8, 8, 8);
 }
 @keyframes cambio {
     0% {margin-left: 0; }
@@ -108,13 +109,13 @@ span img{
 /*Index*/
 .button__arriba{
     display: inline-block;
-    background: rgb(222, 209, 153) !important;
+    background: rgb(222, 209, 153);
     margin:80px 20px;
 }
 .button__arriba a{
     color: rgb(15, 15, 15);
-    background: rgb(230, 214, 145) !important;
-    font-size: 0.9rem !important;
+    background: rgb(230, 214, 145);
+    font-size: 0.9rem;
     text-decoration: none;
 }
 .encabezado{
@@ -139,39 +140,36 @@ span img{
     padding-bottom:10px;
 }
 .noticias h2{
-    padding:5px !important;
+    padding:5px;
     border-radius: 5px;
     color: rgb(255, 238, 0);
     display: inline-block;
-    background: rgb(122, 118, 118) !important;
+    background: rgb(122, 118, 118);
     margin-left: 30px;
 }
-.card-body{
-    background: none !important;
-}
 .card{
-    background:rgba(71, 68, 55, 0.521) !important;
+    background:rgba(71, 68, 55, 0.521);
     text-align: center;
     display: flex;
     align-items: center;
     border: solid 1px;
-    margin:5px !important;
+    margin:5px;
 }
-.card img{
-    width:350px;
+.card img{ 
+    height:100%;
+    width:300px;
     max-width: 100%;
     max-height: 250px;
-    height:100%;
 }
 .card h5{
     color: rgb(235, 180, 31);
-    background:rgba(53, 52, 37, 0.801)!important;
+    background:rgba(53, 52, 37, 0.801);
     font-size: 1.8rem;
 }
 .card p{
     color: rgb(241, 208, 124);
     font-size: 1rem;
-    background:none !important;
+    background:none;
     font-family: 'Courier New', Courier, monospace;
 }
 .card:hover{
@@ -180,11 +178,12 @@ span img{
     opacity: 80%;
 }
 .card-group{
-    padding:20px !important;
+    padding:20px;
 }
 .text-muted {
-    color: rgb(197, 191, 140) !important;
+    color: rgb(197, 191, 140);
 }
+/*Formulario*/
 .formulario{
     max-width: 100%;
     width: 90%;
@@ -193,8 +192,7 @@ span img{
     text-align: center;
     margin:auto;
     margin-top: 130px;
-    background: none;
-    background: black;
+    background:black;
 }
 .formulario h2{
     justify-content: center;
@@ -221,7 +219,7 @@ span img{
 }
 #Enviar{
     color: rgb(253, 251, 251);
-    background: rgb(6, 173, 196) !important;
+    background: rgb(6, 173, 196);
     padding:auto;
     font-size: 1rem;
     margin:50px;
@@ -229,11 +227,12 @@ span img{
     height: 30px;
 }
 #Enviar:hover{
-    background:rgb(116, 218, 231) !important;
+    background:rgb(116, 218, 231);
     cursor: pointer;
     color: rgb(255, 254, 254);
     transition: .7s;
 }
+/*Footer*/
 #footer{
     width: 100%;
     text-align: center;
@@ -245,12 +244,10 @@ span img{
 }
 #footer a{
     font-size: .8rem;
-    background: none;
 }
 #footer img{
     width: 30px;
     margin:10px;
-    background:none;
 }
 #footer p{
     font-family: Arial, Helvetica, sans-serif;
@@ -282,22 +279,24 @@ span img{
     background: none;
     display: flex;
     justify-content: center;
-    padding-top:270px !important;
+    padding-top:270px;
 }
 .title__galeria h2{
-    background:rgb(22, 21, 21) !important;
+    background:rgb(49, 44, 44);
     font-size: 1.6rem;
     margin: 100px 0px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    padding: 10px;
 }
 .title__galeria p{
     font-family: monospace;
     padding: auto;
-    margin: 20px;
-    background:rgb(49, 48, 48) !important;
+    margin: 15px;
+    background:rgb(49, 48, 48);
     font-size: 1rem;
     color: rgb(238, 225, 150);
+    padding:15px;
 }
 .galeria{
     gap: 20px;
@@ -331,14 +330,19 @@ iframe{
     flex-wrap: wrap;
     background: none;
     height:350px;
+    width: 250px;
 }
 /* Contactanos*/
+.contactanos img{
+    display: block;
+    margin: auto;
+    width: 250px;
+    }
 .contactanos{
-    background: none;
-    padding-top:470px;
+    padding-top:70px;
 }
 .contactanos__title{
-    padding-top:320px !important ;
+    padding-top:220px;
     font-size: 1.9rem;
     display: flex;
     justify-content: center;
@@ -360,10 +364,7 @@ iframe{
 /*MEDIA QUERIE*/ 
 /*Tamaño 576px*/
 @media screen and (min-width :576px) {
-    .encabezado__titulo{
-        font-size: 5rem;
-    }
-    .title__galeria h1{
+    .encabezado__titulo ,.title__galeria h1{
         font-size: 5rem;
     }
     .title__galeria h2{
@@ -374,16 +375,17 @@ iframe{
         grid-template-columns:repeat(2,1fr);
     }
     #scroll{
-        padding-top: 100px !important;
+        padding-top: 100px;
         height: 350px;
     }
     #scroll img{
         height: 350px;
     }
     .emblema img{
-        padding-top: 30px !important;
+        padding-top: 30px;
     }
     #logotipo{
+        display: block;
         border-radius: 50%;
         width:100px;
         max-width: 100%;
@@ -407,25 +409,33 @@ iframe{
         max-width: 100%;
         max-height: 350px;
     }
+    .title__galeria p{
+        padding: 20px;
+        margin:20px;
+    }
+    .contactanos img{
+        width: 550px;
+    }
     iframe{
         max-width: 100%;
         height:450px;
+        width: 400px;
     }
 }
 /*Tamaño 992px*/
-@media screen and (min-width :992px) {
+@media screen and (min-width:992px) {
     #logotipo{
         width: 200px;
         height: 150px;
     }
     #scroll{
-        padding-top:200px !important;
-        height: 500px;
+        padding-top:150px;
+        height: 550px;
     }
     #scroll img{
-        height: 500px;
+        height: 550px;
     }
-    .nav__principal ul li ,.formulario label{
+    .formulario label{
         font-size: 1.8rem;
     }
     .encabezado__articulo h2 ,.noticias #cards__title, #formulario__h2{
@@ -440,9 +450,15 @@ iframe{
     .title__galeria p ,.footer__nav #footer__nav__h2 ,#parr{
         font-size: 2.2rem;
     }
+    .card img{
+        width:500px;
+        max-width: 100%;
+        max-height: 350px;
+        height:100%;
+    }
     .card{
-        margin:20px !important;
-        padding:10px !important;
+        margin:20px;
+        padding:10px;
     }
     .card p,#footer a{
         font-size: 1.5rem;
@@ -457,6 +473,9 @@ iframe{
         display: grid;
         grid-template-columns:repeat(3,1fr);
     }
+    .contactanos img{
+        width: 850px;
+    }
     .formulario{
         width: 60%;
     }
@@ -464,18 +483,9 @@ iframe{
         width: 40%;
     }
     .emblema img{
-        padding-top:55px !important;
+        padding-top:55px;
         width: 206px;
         height: 44px;
-    }
-    iframe{
-        height:700px;
-    }
-    .card img{
-        width:500px;
-        max-width: 100%;
-        max-height: 350px;
-        height:100%;
     }
     .galeria{
         display: grid;
@@ -485,5 +495,10 @@ iframe{
     iframe{
         max-width: 100%;
         height:600px;
+        width: 600px;
+    }
+    .title__galeria p{
+        padding: 20px;
+        margin: 30px;
     }
 }
