@@ -1,8 +1,8 @@
 /*variables por defecto de bootstrap editadas*/
 :root{
-    --bs-body-bg:rgb(18, 18, 19);
+    --bs-body-bg:rgba(148, 147, 147, 0.951);
     --bs-tertiary-bg-rgb:0;
-    --bs-secondary-color: rgba(0, 0, 0, 0.927);
+    --bs-secondary-color:black;
 }
 /*body*/
 *{
@@ -192,7 +192,7 @@ span img{
 }  
 .formulario__correo ,.formulario__nombre ,.formulario__mensaje{
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 100px;
     padding: auto;
 }
 .formulario textarea{
@@ -248,7 +248,8 @@ span img{
     font-size: 3rem;
     display: flex;
     justify-content: center;
-    padding-top:270px;
+    padding-top:120px;
+    background:rgb(44, 44, 44);
 }
 .title__galeria h2{
     background:rgb(49, 44, 44);
@@ -316,7 +317,7 @@ iframe{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    background: none;
+    background:rgb(44, 44, 44);
 }
 /*Palmares e Informacion*/
 .centrar{
