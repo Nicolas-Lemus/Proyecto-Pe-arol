@@ -174,7 +174,6 @@ span img{
     max-width: 100%;
     width: 90%;
     border: 2px solid;
-    align-content: center;
     text-align: center;
     margin:auto;
     margin-top: 130px;
@@ -183,8 +182,6 @@ span img{
 .formulario h2{
     justify-content: center;
     font-size:1.4rem;
-    padding:auto;
-    background: none;
     margin: 50px;
 }
 .formulario input{
